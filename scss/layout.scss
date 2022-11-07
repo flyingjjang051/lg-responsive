@@ -85,12 +85,6 @@ header {
       padding-left: 20px;
       padding-right: 20px;
     }
-    &:hover .depth01 {
-      color: $main-color;
-    }
-    &:hover .depth02 {
-      display: block;
-    }
     .depth01 {
       display: flex;
       height: 100px;
@@ -197,6 +191,21 @@ footer {
     }
   }
 }
+@media all and (min-width: 1280px) {
+  #gnb {
+    .list {
+      > li {
+        &:hover .depth01 {
+          color: $main-color;
+        }
+        &:hover .depth02 {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 @media all and (max-width: 1400px) {
   // 여기다가 1280보다 작아졌을때 어떤 css 쓸건지 적용
   .container {
@@ -216,6 +225,9 @@ footer {
 
 @media all and (max-width: 1280px) {
   // 여기다가 1280보다 작아졌을때 어떤 css 쓸건지 적용
+  header {
+    height: 100px;
+  }
   header .util li:last-child {
     display: block;
   }
@@ -245,6 +257,7 @@ footer {
           background-color: #eee;
           position: static;
           padding: 0;
+          border-radius: 0;
           &:before {
             display: none;
           }
@@ -279,4 +292,30 @@ footer {
 
 @media all and (max-width: 640px) {
   // 여기다가 640px보다 작아졌을때 어떤 css 쓸건지 적용
+  header {
+    height: 60px;
+    .container {
+      h1 {
+        left: 20px;
+        height: 60px;
+        img {
+          height: 30px;
+        }
+      }
+      .util {
+        right: 20px;
+        height: 60px;
+      }
+    }
+  }
+  #gnb {
+    top: 60px;
+    .list {
+      > li {
+        .depth01 {
+          height: 60px;
+        }
+      }
+    }
+  }
 }

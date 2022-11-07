@@ -83,12 +83,6 @@ header .util li:hover {
   padding-left: 20px;
   padding-right: 20px;
 }
-#gnb .list > li:hover .depth01 {
-  color: #dd3156;
-}
-#gnb .list > li:hover .depth02 {
-  display: block;
-}
 #gnb .list > li .depth01 {
   display: flex;
   height: 100px;
@@ -185,6 +179,14 @@ footer #footer .container .sns .nts img {
   height: 50px;
 }
 
+@media all and (min-width: 1280px) {
+  #gnb .list > li:hover .depth01 {
+    color: #dd3156;
+  }
+  #gnb .list > li:hover .depth02 {
+    display: block;
+  }
+}
 @media all and (max-width: 1400px) {
   .container {
     width: 100%;
@@ -197,6 +199,9 @@ footer #footer .container .sns .nts img {
   }
 }
 @media all and (max-width: 1280px) {
+  header {
+    height: 100px;
+  }
   header .util li:last-child {
     display: block;
   }
@@ -229,6 +234,7 @@ footer #footer .container .sns .nts img {
     background-color: #eee;
     position: static;
     padding: 0;
+    border-radius: 0;
   }
   #gnb .list > li .depth02:before {
     display: none;
@@ -251,5 +257,27 @@ footer #footer .container .sns .nts img {
     background-color: #dd3156;
     margin-right: 10px;
     border-radius: 100px;
+  }
+}
+@media all and (max-width: 640px) {
+  header {
+    height: 60px;
+  }
+  header .container h1 {
+    left: 20px;
+    height: 60px;
+  }
+  header .container h1 img {
+    height: 30px;
+  }
+  header .container .util {
+    right: 20px;
+    height: 60px;
+  }
+  #gnb {
+    top: 60px;
+  }
+  #gnb .list > li .depth01 {
+    height: 60px;
   }
 }
