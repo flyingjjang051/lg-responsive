@@ -190,6 +190,9 @@
   line-height: 1.5;
   margin: 30px 0;
 }
+#notice .banner ul li p {
+  line-height: 1.5;
+}
 #notice .banner ul li .date {
   margin-top: 50px;
 }
@@ -247,6 +250,29 @@
   }
   #introduce .banner ul li .txt h3 {
     font-size: clamp(20px, 3.6734693878vw, 36px);
+  }
+  #activity .btns {
+    top: 40px;
+    right: 20px;
+  }
+  #activity .btns i {
+    font-size: 20px;
+  }
+  #activity .banner ul li .txt {
+    left: 30px;
+  }
+  #activity .banner ul li .txt h3 {
+    font-size: clamp(20px, 3.6734693878vw, 36px);
+  }
+  #notice .btns {
+    top: 40px;
+    right: 20px;
+  }
+  #notice .btns i {
+    font-size: 20px;
+  }
+  #notice .banner ul li h3 {
+    font-size: clamp(20px, 2.4489795918vw, 24px);
   }
 }
 @media all and (max-width: 640px) {
