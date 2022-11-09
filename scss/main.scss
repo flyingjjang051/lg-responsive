@@ -133,8 +133,9 @@
   .banner {
     ul {
       li {
-        height: 380px;
         width: 50%;
+        min-height: 280px;
+        aspect-ratio: 1.5 / 1;
         position: relative;
         overflow: hidden;
         &:hover {
@@ -235,12 +236,95 @@
 }
 @media all and (max-width: 1280px) {
   // 여기다가 1280보다 작아졌을때 어떤 css 쓸건지 적용
+  #main-visual {
+    .list {
+      li {
+        .txt {
+          left: 15vw;
+          font-size: clamp(16px, 1.875vw, 24px);
+          strong {
+            font-size: clamp(24px, 5.625vw, 72px);
+          }
+        }
+      }
+    }
+    .pagination {
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 100px;
+        border: 3px solid #fff;
+        margin: 0 5px;
+        background-color: transparent;
+        transition: all 0.25s ease;
+        &-active {
+          width: 80px;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .contents-box {
+    h2 {
+      font-size: clamp(24px, 36/1280 * 100vw, 36px);
+    }
+  }
 }
 
-@media all and (max-width: 960px) {
+@media all and (max-width: 980px) {
   // 여기다가 960px보다 작아졌을때 어떤 css 쓸건지 적용
+  .contents-box {
+    padding: clamp(30px, 100/980 * 100vw, 100px) 0;
+    .banner {
+      margin-top: clamp(30px, 100/980 * 100vw, 100px);
+    }
+  }
+  #main-visual {
+    .btn {
+      padding: 0;
+      &.btn-prev {
+      }
+      .material-icons {
+        font-size: 48px;
+      }
+    }
+  }
+  #introduce {
+    .btns {
+      top: 90px;
+      right: 20px;
+      i {
+        font-size: 20px;
+      }
+    }
+    .banner {
+      ul {
+        li {
+          .txt {
+            left: 30px;
+            h3 {
+              font-size: clamp(20px, 36/980 * 100vw, 36px);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 640px) {
   // 여기다가 640px보다 작아졌을때 어떤 css 쓸건지 적용
+  #main-visual {
+    .list {
+      li {
+        .txt {
+          left: 15vw;
+          right: 15vw;
+          .desc {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
 }

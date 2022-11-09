@@ -19,13 +19,19 @@ const mainSlider = new Swiper("#main-visual", {
 });
 
 const introduceSlider = new Swiper("#introduce .banner", {
-  slidesPerView: 2,
+  slidesPerView: 1,
   loop: true,
   spaceBetween: 20,
-  //centeredSlides: true,
+  centeredSlides: true,
   navigation: {
     nextEl: "#introduce .btn-next",
     prevEl: "#introduce .btn-prev",
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    640: {
+      slidesPerView: 2,
+    },
   },
 });
 const activitySlider = new Swiper("#activity  .banner", {

@@ -190,6 +190,8 @@ footer #footer .container .sns .nts img {
 @media all and (max-width: 1400px) {
   .container {
     width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
   }
   header .container h1 {
     left: 50px;
@@ -257,6 +259,11 @@ footer #footer .container .sns .nts img {
     background-color: #dd3156;
     margin-right: 10px;
     border-radius: 100px;
+  }
+}
+@media all and (max-width: 980px) {
+  .container {
+    padding: 0 20px;
   }
 }
 @media all and (max-width: 640px) {
